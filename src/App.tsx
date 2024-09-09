@@ -10,12 +10,14 @@ import { Container } from "./components/container";
 
 const ColourFamily = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="my-2 flex flex-row justify-center gap-3">{children}</div>
+    <div className="my-2 flex flex-row justify-center gap-1 lg:gap-3">
+      {children}
+    </div>
   );
 };
 
 const Swatch = ({ className }: { className: string }) => {
-  return <div className={cx("size-8 rounded-md", className)}></div>;
+  return <div className={cx("size-4 rounded-md lg:size-8", className)}></div>;
 };
 
 function App() {
@@ -23,9 +25,9 @@ function App() {
     <>
       <Header />
       <Container>
-        <div className="grid grid-cols-[200px_1fr]">
+        <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr]">
           <Nav />
-          <div>
+          <div className="px-4 py-4">
             <ColourFamily>
               <Swatch className="bg-primary-50" />
               <Swatch className="bg-primary-100" />
