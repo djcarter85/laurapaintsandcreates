@@ -3,7 +3,7 @@ import { Container } from "./container";
 
 const Header = () => {
   return (
-    <div className="bg-primary-600 py-4">
+    <div className="bg-gradient-to-r from-primary-600 to-primary-500 py-4">
       <Container>
         <img src={logo} className="mx-auto size-40 rounded-full" />
       </Container>

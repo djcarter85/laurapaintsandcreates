@@ -4,7 +4,7 @@ import { Facebook, Instagram } from "react-bootstrap-icons";
 const FooterIconLink = ({ href, icon }: { href: string; icon: ReactNode }) => {
   return (
     <a
-      className="text-2xl text-primary-200 hover:text-secondary-300"
+      className="text-2xl text-primary-100 hover:text-secondary-300"
       href={href}
     >
       {icon}
@@ -14,7 +14,7 @@ const FooterIconLink = ({ href, icon }: { href: string; icon: ReactNode }) => {
 
 const Footer = () => {
   return (
-    <footer className="mt-4 flex flex-row justify-center gap-3 bg-primary-600 py-4">
+    <footer className="mt-4 flex flex-row justify-center gap-3 bg-primary-600 bg-gradient-to-r from-primary-600 to-primary-500 py-4">
       <FooterIconLink
         href="https://www.instagram.com/laurapaintsandcreates/"
         icon={<Instagram />}
