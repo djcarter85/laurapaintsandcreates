@@ -9,7 +9,7 @@ const NavLink = ({ text, href }: { text: string; href: string }) => {
     <Link
       to={href}
       className={cx(
-        "font-display text-2xl text-primary-100 hover:text-secondary-400 md:text-3xl lg:text-4xl",
+        "font-display text-2xl text-primary-100 hover:text-secondary-400 md:text-4xl",
         isActive && "text-secondary-400",
       )}
     >
@@ -20,7 +20,7 @@ const NavLink = ({ text, href }: { text: string; href: string }) => {
 
 const Nav = () => {
   return (
-    <nav className="flex flex-row justify-center gap-x-4 md:gap-x-6 lg:gap-x-8">
+    <nav className="flex flex-row justify-center gap-x-4 md:gap-x-8">
       <NavLink text="Portfolio" href="/" />
       <NavLink text="About" href="/about" />
       <NavLink text="Shop" href="/shop" />
