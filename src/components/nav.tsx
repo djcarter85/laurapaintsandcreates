@@ -9,8 +9,8 @@ const NavLink = ({ text, href }: { text: string; href: string }) => {
     <Link
       to={href}
       className={cx(
-        "font-display text-2xl text-primary-800 hover:text-secondary-600 md:text-3xl lg:text-4xl",
-        isActive && "text-secondary-600",
+        "font-display text-2xl text-primary-100 hover:text-secondary-400 md:text-3xl lg:text-4xl",
+        isActive && "text-secondary-400",
       )}
     >
       {text}
