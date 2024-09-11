@@ -9,7 +9,7 @@ const Layout = () => {
     <>
       <Header />
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr] lg:gap-6">
+        <div className="my-4 flex flex-col gap-4 lg:my-6 lg:gap-6">
           <Nav />
           <Main />
         </div>

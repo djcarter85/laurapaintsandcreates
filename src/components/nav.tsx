@@ -20,7 +20,7 @@ const NavLink = ({ text, href }: { text: string; href: string }) => {
 
 const Nav = () => {
   return (
-    <nav className="my-4 flex flex-row justify-center gap-x-4 gap-y-4 md:gap-x-6 lg:flex-col lg:justify-start lg:my-6">
+    <nav className="flex flex-row justify-center gap-x-4 md:gap-x-6 lg:gap-x-8">
       <NavLink text="Portfolio" href="/" />
       <NavLink text="About" href="/about" />
       <NavLink text="Shop" href="/shop" />

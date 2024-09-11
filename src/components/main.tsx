@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 
 const Main = () => {
   return (
-    <main className="my-4 lg:my-6">
+    <main>
       <Outlet />
     </main>
   );
