@@ -14,7 +14,7 @@ const FooterIconLink = ({ href, icon }: { href: string; icon: ReactNode }) => {
 
 const Footer = () => {
   return (
-    <footer className="mt-4 flex flex-row justify-center gap-3 bg-primary-600 bg-gradient-to-r from-primary-600 to-primary-500 py-4">
+    <footer className="flex flex-row justify-center gap-3 bg-primary-600 bg-gradient-to-r from-primary-600 to-primary-500 py-4">
       <FooterIconLink
         href="https://www.instagram.com/laurapaintsandcreates/"
         icon={<Instagram />}
