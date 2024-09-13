@@ -1,14 +1,14 @@
 import hares from "../assets/portfolio/hares.jpg";
-import otters from "../assets/portfolio/otters.jpg";
-import birthdayPheasants from "../assets/portfolio/birthday-pheasants.jpg";
 import newZealand from "../assets/portfolio/new-zealand.jpg";
-import stoat from "../assets/portfolio/stoat.jpg";
-import foxes from "../assets/portfolio/foxes.jpg";
+import coast from "../assets/portfolio/coast.jpg";
 
-const PortfolioImage = ({ src }: { src: string }) => {
+const Category = ({ imgSrc, title }: { imgSrc: string; title: string }) => {
   return (
-    <div className="aspect-square">
-      <img src={src} className="h-full w-full object-cover" />
+    <div className="flex flex-col gap-4 rounded-xl bg-primary-200 p-4">
+      <div className="aspect-square rounded-xl">
+        <img src={imgSrc} className="h-full w-full rounded-lg object-cover" />
+      </div>
+      <div className="text-center text-2xl">{title}</div>
     </div>
   );
 };
@@ -16,12 +16,9 @@ const PortfolioImage = ({ src }: { src: string }) => {
 const PortfolioPage = () => {
   return (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-      <PortfolioImage src={hares} />
-      <PortfolioImage src={otters} />
-      <PortfolioImage src={birthdayPheasants} />
-      <PortfolioImage src={newZealand} />
-      <PortfolioImage src={stoat} />
-      <PortfolioImage src={foxes} />
+      <Category imgSrc={hares} title="Wildlife" />
+      <Category imgSrc={coast} title="Landscapes" />
+      <Category imgSrc={newZealand} title="Portraits" />
     </div>
   );
 };
