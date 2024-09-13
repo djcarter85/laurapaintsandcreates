@@ -4,7 +4,7 @@ import { Container } from "./container";
 
 const FooterIconLink = ({ href, icon }: { href: string; icon: ReactNode }) => {
   return (
-    <a className="text-2xl hover:text-secondary-300" href={href}>
+    <a className="text-2xl hover:text-secondary-400" href={href}>
       {icon}
     </a>
   );
