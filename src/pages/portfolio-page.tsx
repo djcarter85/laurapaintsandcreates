@@ -1,4 +1,5 @@
 import owl from "../assets/portfolio/owl.jpeg";
+import otters from "../assets/portfolio/otters.jpeg";
 import oldHarry from "../assets/portfolio/old-harry.jpeg";
 import lauraAndDan from "../assets/portfolio/laura-and-dan.jpeg";
 import { Link } from "react-router-dom";
@@ -47,7 +48,7 @@ const CarouselSlide = ({
       id={id}
       className="relative box-content flex w-full flex-none snap-start"
     >
-      <img src={imgSrc} className="w-full" />
+      <img src={imgSrc} className="w-11/12 rounded-lg" />
       <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
         <a
           href={`#${prevId}`}
@@ -71,13 +72,13 @@ const Carousel = () => {
     <div className="inline-flex w-full snap-x snap-mandatory overflow-x-scroll scroll-smooth">
       <CarouselSlide
         id="slide1"
-        imgSrc="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
+        imgSrc={owl}
         prevId="slide4"
         nextId="slide2"
       />{" "}
       <CarouselSlide
         id="slide2"
-        imgSrc="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+        imgSrc={otters}
         prevId="slide1"
         nextId="slide3"
       />{" "}
