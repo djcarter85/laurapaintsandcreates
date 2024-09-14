@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const NavLink = ({ text, href }: { text: string; href: string }) => {
   const { pathname } = useLocation();
-  const isActive = pathname === href;
+  const isActive = pathname.startsWith(href);
 
   return (
     <Link
@@ -21,7 +21,7 @@ const NavLink = ({ text, href }: { text: string; href: string }) => {
 const Nav = () => {
   return (
     <nav className="flex flex-row justify-center gap-x-4 md:gap-x-8">
-      <NavLink text="Portfolio" href="/" />
+      <NavLink text="Portfolio" href="/portfolio" />
       <NavLink text="About" href="/about" />
       <NavLink text="Shop" href="/shop" />
       <NavLink text="Contact" href="/contact" />

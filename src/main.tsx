@@ -4,7 +4,14 @@ import { PortfolioPage } from "./pages/portfolio-page.tsx";
 import { ContactPage } from "./pages/contact-page.tsx";
 import { ShopPage } from "./pages/shop-page.tsx";
 import { AboutPage } from "./pages/about-page.tsx";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { WildlifePage } from "./pages/portfolio/wildlife-page.tsx";
+import { LandscapesPage } from "./pages/portfolio/landscapes-page.tsx";
+import { PortraitsPage } from "./pages/portfolio/portraits-page.tsx";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
 import { Layout } from "./layout.tsx";
 import "./index.css";
 import "@fontsource-variable/figtree";
@@ -25,8 +32,9 @@ const router = createBrowserRouter([
     path: "/",
     element: <Layout />,
     children: [
+      { path: "/", element: <Navigate to="/portfolio" /> },
       {
-        path: "/",
+        path: "/portfolio",
         element: <PortfolioPage />,
       },
       {
@@ -40,6 +48,18 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactPage />,
+      },
+      {
+        path: "/portfolio/wildlife",
+        element: <WildlifePage />,
+      },
+      {
+        path: "/portfolio/landscapes",
+        element: <LandscapesPage />,
+      },
+      {
+        path: "/portfolio/portraits",
+        element: <PortraitsPage />,
       },
     ],
   },
