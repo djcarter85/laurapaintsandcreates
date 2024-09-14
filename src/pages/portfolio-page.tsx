@@ -1,6 +1,6 @@
-import hares from "../assets/portfolio/hares.jpg";
-import newZealand from "../assets/portfolio/new-zealand.jpg";
-import coast from "../assets/portfolio/coast.jpg";
+import owl from "../assets/portfolio/owl.jpeg";
+import oldHarry from "../assets/portfolio/old-harry.jpeg";
+import lauraAndDan from "../assets/portfolio/laura-and-dan.jpeg";
 import { Link } from "react-router-dom";
 
 const CategoryLink = ({
@@ -23,7 +23,7 @@ const CategoryLink = ({
           className="h-full w-full object-cover transition-transform group-hover:scale-110"
         />
       </div>
-      <div className="font-display text-5xl transition-transform group-hover:scale-90">
+      <div className="text-3xl transition-transform group-hover:scale-90">
         {title}
       </div>
     </Link>
@@ -33,18 +33,14 @@ const CategoryLink = ({
 const PortfolioPage = () => {
   return (
     <div className="my-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <CategoryLink imgSrc={owl} title="Wildlife" href="/portfolio/wildlife" />
       <CategoryLink
-        imgSrc={hares}
-        title="Wildlife"
-        href="/portfolio/wildlife"
-      />
-      <CategoryLink
-        imgSrc={coast}
+        imgSrc={oldHarry}
         title="Landscapes"
         href="/portfolio/landscapes"
       />
       <CategoryLink
-        imgSrc={newZealand}
+        imgSrc={lauraAndDan}
         title="Portraits"
         href="/portfolio/portraits"
       />
