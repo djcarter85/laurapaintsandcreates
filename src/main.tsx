@@ -14,17 +14,7 @@ import {
 } from "react-router-dom";
 import { Layout } from "./layout.tsx";
 import "./index.css";
-import "@fontsource-variable/figtree";
 import "@fontsource/caveat-brush";
-import "@fontsource/quattrocento-sans";
-
-// Supports weights 400-700
-import "@fontsource-variable/caveat";
-
-// Supports weights 200-900
-import "@fontsource-variable/nunito";
-
-import "@fontsource/quando";
 import "@fontsource/alegreya-sans";
 
 const router = createBrowserRouter([
