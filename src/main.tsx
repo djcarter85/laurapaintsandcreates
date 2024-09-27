@@ -4,9 +4,6 @@ import { PortfolioPage } from "./pages/portfolio-page.tsx";
 import { ContactPage } from "./pages/contact-page.tsx";
 import { ShopPage } from "./pages/shop-page.tsx";
 import { AboutPage } from "./pages/about-page.tsx";
-import { WildlifePage } from "./pages/portfolio/wildlife-page.tsx";
-import { LandscapesPage } from "./pages/portfolio/landscapes-page.tsx";
-import { PortraitsPage } from "./pages/portfolio/portraits-page.tsx";
 import {
   createBrowserRouter,
   Navigate,
@@ -38,18 +35,6 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactPage />,
-      },
-      {
-        path: "/portfolio/wildlife",
-        element: <WildlifePage />,
-      },
-      {
-        path: "/portfolio/landscapes",
-        element: <LandscapesPage />,
-      },
-      {
-        path: "/portfolio/portraits",
-        element: <PortraitsPage />,
       },
     ],
   },
