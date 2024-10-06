@@ -5,7 +5,7 @@ import { TextBlock } from "../components/text-block";
 const AboutPage = () => {
   return (
     <TextBlock>
-      <img src={profile} className="mx-auto mb-4 size-48 rounded-full" />
+      <img src={profile} className="mx-auto mb-4 size-48 md:size-60 rounded-full" />
       <Para>Hi! I'm Laura.</Para>
       <Para>
         I've been creating for as long as I can remember. I love wildlife and
