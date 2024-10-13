@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { Facebook, Instagram } from "react-bootstrap-icons";
 import { Container } from "./container";
+import { FacebookUrl, InstagramUrl } from "../constants";
 
 const FooterIconLink = ({ href, icon }: { href: string; icon: ReactNode }) => {
   return (
@@ -16,14 +17,8 @@ const Footer = () => {
       <Container>
         <div className="flex flex-col items-center gap-3 md:flex-row md:justify-between">
           <div className="flex flex-row gap-3">
-            <FooterIconLink
-              href="https://www.instagram.com/laurapaintsandcreates/"
-              icon={<Instagram />}
-            />
-            <FooterIconLink
-              href="https://www.facebook.com/ljkirk.art"
-              icon={<Facebook />}
-            />
+            <FooterIconLink href={InstagramUrl} icon={<Instagram />} />
+            <FooterIconLink href={FacebookUrl} icon={<Facebook />} />
           </div>
           <div className="text-xl md:order-first">
             Laura Paints & Creates &copy; 2024
