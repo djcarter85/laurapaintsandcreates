@@ -1,26 +1,28 @@
-import { EnvelopeAt, Telephone } from "react-bootstrap-icons";
-import { Hyperlink } from "../components/hyperlink";
+import { EnvelopeAt } from "react-bootstrap-icons";
+import { ExternalLink } from "../components/links";
 import { Para } from "../components/para";
 import { TextBlock } from "../components/text-block";
+import { FacebookUrl, InstagramUrl } from "../constants";
 
 const EmailLink = ({ address }: { address: string }) => {
-  return <Hyperlink href={`mailto:${address}`}>{address}</Hyperlink>;
+  return <ExternalLink href={`mailto:${address}`}>{address}</ExternalLink>;
 };
 
 const ContactPage = () => {
   return (
     <TextBlock>
       <Para>
-        I'd love to hear from you! If you'd like to get in touch with me, please
-        use one of the links below.
+        If you'd like to work with me, then I'd love to hear from you! Please do
+        get in touch using the email address below.
       </Para>
       <Para>
         <EnvelopeAt className="mr-2 inline" />
-        <EmailLink address="fake@email.com" />
+        <EmailLink address="laurapaintsandcreates@outlook.com" />
       </Para>
       <Para>
-        <Telephone className="mr-2 inline" />
-        <span>01234 567890</span>
+        You can also contact me via DM on{" "}
+        <ExternalLink href={InstagramUrl}>Instagram</ExternalLink> or{" "}
+        <ExternalLink href={FacebookUrl}>Facebook</ExternalLink>.
       </Para>
     </TextBlock>
   );
