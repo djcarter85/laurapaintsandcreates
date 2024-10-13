@@ -26,7 +26,7 @@ const CategorySection = ({
 }) => {
   return (
     <div className="flex flex-col gap-5">
-      <h2 className="text-center text-2xl font-bold uppercase md:text-left">
+      <h2 className="text-center text-2xl font-bold uppercase tracking-wider md:text-left">
         {title}
       </h2>
       <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
