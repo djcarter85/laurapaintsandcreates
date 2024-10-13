@@ -9,6 +9,9 @@ import coast from "../assets/portfolio/coast.jpg";
 import lauraAndDan from "../assets/portfolio/laura-and-dan.jpeg";
 import newZealand from "../assets/portfolio/new-zealand.jpg";
 
+import joseph from "../assets/portfolio/joseph.jpeg";
+import bournville from "../assets/portfolio/bournville.jpeg";
+
 const ImageCard = ({ imgSrc }: { imgSrc: string }) => {
   return (
     <div className="aspect-square overflow-hidden rounded-xl">
@@ -40,13 +43,19 @@ const CategorySection = ({
 
 const PortfolioPage = () => {
   return (
-    <div className="my-8 flex flex-col gap-8">
-      <CategorySection
-        title="Wildlife"
-        imgSrcs={[owl, badgers, foxes, otters]}
-      />
-      <CategorySection title="Landscapes" imgSrcs={[oldHarry, coast]} />
-      <CategorySection title="Portraits" imgSrcs={[lauraAndDan, newZealand]} />
+    <div className="my-8">
+      <div className="flex flex-col gap-8">
+        <CategorySection
+          title="Wildlife"
+          imgSrcs={[owl, badgers, foxes, otters]}
+        />
+        <CategorySection title="Landscapes" imgSrcs={[oldHarry, coast]} />
+        <CategorySection
+          title="Portraits"
+          imgSrcs={[lauraAndDan, newZealand]}
+        />
+        <CategorySection title="Prints" imgSrcs={[joseph, bournville]} />
+      </div>
     </div>
   );
 };
