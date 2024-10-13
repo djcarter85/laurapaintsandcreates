@@ -1,19 +1,19 @@
-import owl from "../assets/portfolio/owl.jpeg";
-import badgers from "../assets/portfolio/badgers.jpeg";
-import foxes from "../assets/portfolio/foxes.jpg";
-import otters from "../assets/portfolio/otters.jpeg";
-import polecat from "../assets/portfolio/polecat.jpeg";
+import owl from "../assets/portfolio/wildlife/owl.jpeg";
+import badgers from "../assets/portfolio/wildlife/badgers.jpeg";
+import foxes from "../assets/portfolio/wildlife/foxes.jpg";
+import otters from "../assets/portfolio/wildlife/otters.jpeg";
+import polecat from "../assets/portfolio/wildlife/polecat.jpeg";
 
-import oldHarry from "../assets/portfolio/old-harry.jpeg";
-import coast from "../assets/portfolio/coast.jpg";
-import coastPath from "../assets/portfolio/coast-path.jpeg";
-import faroes from "../assets/portfolio/faroes.jpeg";
+import oldHarry from "../assets/portfolio/landscapes/old-harry.jpeg";
+import coast from "../assets/portfolio/landscapes/coast.jpg";
+import coastPath from "../assets/portfolio/landscapes/coast-path.jpeg";
+import faroes from "../assets/portfolio/landscapes/faroes.jpeg";
 
-import lauraAndDan from "../assets/portfolio/laura-and-dan.jpeg";
-import newZealand from "../assets/portfolio/new-zealand.jpg";
+import lauraAndDan from "../assets/portfolio/portraits/laura-and-dan.jpeg";
+import newZealand from "../assets/portfolio/portraits/new-zealand.jpg";
 
-import joseph from "../assets/portfolio/joseph.jpeg";
-import bournville from "../assets/portfolio/bournville.jpeg";
+import joseph from "../assets/portfolio/prints/joseph.jpeg";
+import bournville from "../assets/portfolio/prints/bournville.jpeg";
 
 const ImageCard = ({ imgSrc }: { imgSrc: string }) => {
   return (
