@@ -2,9 +2,12 @@ import owl from "../assets/portfolio/owl.jpeg";
 import badgers from "../assets/portfolio/badgers.jpeg";
 import foxes from "../assets/portfolio/foxes.jpg";
 import otters from "../assets/portfolio/otters.jpeg";
+import polecat from "../assets/portfolio/polecat.jpeg";
 
 import oldHarry from "../assets/portfolio/old-harry.jpeg";
 import coast from "../assets/portfolio/coast.jpg";
+import coastPath from "../assets/portfolio/coast-path.jpeg";
+import faroes from "../assets/portfolio/faroes.jpeg";
 
 import lauraAndDan from "../assets/portfolio/laura-and-dan.jpeg";
 import newZealand from "../assets/portfolio/new-zealand.jpg";
@@ -47,9 +50,12 @@ const PortfolioPage = () => {
       <div className="flex flex-col gap-8">
         <CategorySection
           title="Wildlife"
-          imgSrcs={[owl, badgers, foxes, otters]}
+          imgSrcs={[owl, badgers, foxes, otters, polecat]}
         />
-        <CategorySection title="Landscapes" imgSrcs={[oldHarry, coast]} />
+        <CategorySection
+          title="Landscapes"
+          imgSrcs={[oldHarry, coast, coastPath, faroes]}
+        />
         <CategorySection
           title="Portraits"
           imgSrcs={[lauraAndDan, newZealand]}
