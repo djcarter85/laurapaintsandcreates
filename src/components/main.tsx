@@ -3,7 +3,7 @@ import { Container } from "./container";
 
 const Main = () => {
   return (
-    <main className="my-4">
+    <main className="my-4 grow">
       <Container>
         <Outlet />
       </Container>
