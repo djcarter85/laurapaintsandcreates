@@ -75,9 +75,14 @@ const FullscreenOverlay = ({
   }
 
   return (
-    <div className="fixed inset-0 z-50 bg-primary-500/50">
+    <div className="fixed inset-0 z-50 bg-primary-500/50" onClick={close}>
       <Container>
-        <div className="my-4 flex size-full flex-col gap-4 rounded-lg bg-primary-100 p-4">
+        <div
+          className="my-4 flex size-full flex-col gap-4 rounded-lg bg-primary-100 p-4"
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
+        >
           <div className="flex flex-row justify-end">
             <button
               onClick={close}
