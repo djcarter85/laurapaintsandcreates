@@ -1,8 +1,12 @@
 import owl from "../assets/portfolio/wildlife/owl.jpeg";
+import owlThumb from "../assets/portfolio/wildlife/owl-thumb.jpeg";
 import badgers from "../assets/portfolio/wildlife/badgers.jpeg";
+import badgersThumb from "../assets/portfolio/wildlife/badgers-thumb.jpeg";
 import foxes from "../assets/portfolio/wildlife/foxes.jpg";
 import otters from "../assets/portfolio/wildlife/otters.jpeg";
+import ottersThumb from "../assets/portfolio/wildlife/otters-thumb.jpeg";
 import polecat from "../assets/portfolio/wildlife/polecat.jpeg";
+import polecatThumb from "../assets/portfolio/wildlife/polecat-thumb.jpeg";
 
 import oldHarry from "../assets/portfolio/landscapes/old-harry.jpeg";
 import coast from "../assets/portfolio/landscapes/coast.jpg";
@@ -19,9 +23,11 @@ import { ReactNode, useEffect, useState } from "react";
 
 const ImageCard = ({
   imgSrc,
+  thumbnailSrc,
   setFullscreenImageSrc,
 }: {
   imgSrc: string;
+  thumbnailSrc?: string;
   setFullscreenImageSrc: (fullscreenImageSrc: string) => void;
 }) => {
   return (
@@ -29,7 +35,10 @@ const ImageCard = ({
       className="aspect-square overflow-hidden rounded-xl"
       onClick={() => setFullscreenImageSrc(imgSrc)}
     >
-      <img src={imgSrc} className="h-full w-full object-cover" />
+      <img
+        src={thumbnailSrc ?? imgSrc}
+        className="h-full w-full object-cover"
+      />
     </button>
   );
 };
@@ -99,10 +108,12 @@ const PortfolioPage = () => {
         <CategorySection title="Wildlife">
           <ImageCard
             imgSrc={owl}
+            thumbnailSrc={owlThumb}
             setFullscreenImageSrc={setFullscreenImageSrc}
           />
           <ImageCard
             imgSrc={badgers}
+            thumbnailSrc={badgersThumb}
             setFullscreenImageSrc={setFullscreenImageSrc}
           />
           <ImageCard
@@ -111,10 +122,12 @@ const PortfolioPage = () => {
           />
           <ImageCard
             imgSrc={otters}
+            thumbnailSrc={ottersThumb}
             setFullscreenImageSrc={setFullscreenImageSrc}
           />
           <ImageCard
             imgSrc={polecat}
+            thumbnailSrc={polecatThumb}
             setFullscreenImageSrc={setFullscreenImageSrc}
           />
         </CategorySection>
