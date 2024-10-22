@@ -15,7 +15,7 @@ import newZealand from "../assets/portfolio/portraits/new-zealand.jpg";
 import joseph from "../assets/portfolio/prints/joseph.jpeg";
 import bournville from "../assets/portfolio/prints/bournville.jpeg";
 
-import { useEffect, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 const ImageCard = ({
   imgSrc,
@@ -36,12 +36,10 @@ const ImageCard = ({
 
 const CategorySection = ({
   title,
-  imgSrcs,
-  setFullscreenImageSrc,
+  children,
 }: {
   title: string;
-  imgSrcs: string[];
-  setFullscreenImageSrc: (fullscreenImageSrc: string) => void;
+  children: ReactNode;
 }) => {
   return (
     <div className="flex flex-col gap-5">
@@ -49,13 +47,7 @@ const CategorySection = ({
         {title}
       </h2>
       <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
-        {imgSrcs.map((x) => (
-          <ImageCard
-            key={x}
-            imgSrc={x}
-            setFullscreenImageSrc={setFullscreenImageSrc}
-          />
-        ))}
+        {children}
       </div>
     </div>
   );
@@ -104,26 +96,66 @@ const PortfolioPage = () => {
   return (
     <div className="my-8">
       <div className="flex flex-col gap-8">
-        <CategorySection
-          title="Wildlife"
-          imgSrcs={[owl, badgers, foxes, otters, polecat]}
-          setFullscreenImageSrc={setFullscreenImageSrc}
-        />
-        <CategorySection
-          title="Landscapes"
-          imgSrcs={[oldHarry, coast, coastPath, faroes]}
-          setFullscreenImageSrc={setFullscreenImageSrc}
-        />
-        <CategorySection
-          title="Portraits"
-          imgSrcs={[lauraAndDan, newZealand]}
-          setFullscreenImageSrc={setFullscreenImageSrc}
-        />
-        <CategorySection
-          title="Prints"
-          imgSrcs={[joseph, bournville]}
-          setFullscreenImageSrc={setFullscreenImageSrc}
-        />
+        <CategorySection title="Wildlife">
+          <ImageCard
+            imgSrc={owl}
+            setFullscreenImageSrc={setFullscreenImageSrc}
+          />
+          <ImageCard
+            imgSrc={badgers}
+            setFullscreenImageSrc={setFullscreenImageSrc}
+          />
+          <ImageCard
+            imgSrc={foxes}
+            setFullscreenImageSrc={setFullscreenImageSrc}
+          />
+          <ImageCard
+            imgSrc={otters}
+            setFullscreenImageSrc={setFullscreenImageSrc}
+          />
+          <ImageCard
+            imgSrc={polecat}
+            setFullscreenImageSrc={setFullscreenImageSrc}
+          />
+        </CategorySection>
+        <CategorySection title="Landscapes">
+          <ImageCard
+            imgSrc={oldHarry}
+            setFullscreenImageSrc={setFullscreenImageSrc}
+          />
+          <ImageCard
+            imgSrc={coast}
+            setFullscreenImageSrc={setFullscreenImageSrc}
+          />
+          <ImageCard
+            imgSrc={coastPath}
+            setFullscreenImageSrc={setFullscreenImageSrc}
+          />
+          <ImageCard
+            imgSrc={faroes}
+            setFullscreenImageSrc={setFullscreenImageSrc}
+          />
+        </CategorySection>
+        <CategorySection title="Portraits">
+          <ImageCard
+            imgSrc={lauraAndDan}
+            setFullscreenImageSrc={setFullscreenImageSrc}
+          />
+          <ImageCard
+            imgSrc={newZealand}
+            setFullscreenImageSrc={setFullscreenImageSrc}
+          />
+        </CategorySection>
+        <CategorySection title="Prints">
+          <ImageCard
+            imgSrc={joseph}
+            setFullscreenImageSrc={setFullscreenImageSrc}
+          />
+          <ImageCard
+            imgSrc={bournville}
+            setFullscreenImageSrc={setFullscreenImageSrc}
+          />
+        </CategorySection>
       </div>
       {fullscreenImageSrc && (
         <FullscreenOverlay
