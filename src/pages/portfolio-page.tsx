@@ -2,11 +2,14 @@ import owl from "../assets/portfolio/wildlife/owl.jpeg";
 import owlThumb from "../assets/portfolio/wildlife/owl-thumb.jpeg";
 import badgers from "../assets/portfolio/wildlife/badgers.jpeg";
 import badgersThumb from "../assets/portfolio/wildlife/badgers-thumb.jpeg";
-import foxes from "../assets/portfolio/wildlife/foxes.jpg";
 import otters from "../assets/portfolio/wildlife/otters.jpeg";
 import ottersThumb from "../assets/portfolio/wildlife/otters-thumb.jpeg";
+import fox from "../assets/portfolio/wildlife/fox.jpeg";
+import foxThumb from "../assets/portfolio/wildlife/fox-thumb.jpeg";
 import polecat from "../assets/portfolio/wildlife/polecat.jpeg";
 import polecatThumb from "../assets/portfolio/wildlife/polecat-thumb.jpeg";
+import lapwing from "../assets/portfolio/wildlife/lapwing.jpeg";
+import lapwingThumb from "../assets/portfolio/wildlife/lapwing-thumb.jpeg";
 
 import oldHarry from "../assets/portfolio/landscapes/old-harry.jpeg";
 import coast from "../assets/portfolio/landscapes/coast.jpg";
@@ -15,9 +18,13 @@ import faroes from "../assets/portfolio/landscapes/faroes.jpeg";
 
 import ld from "../assets/portfolio/portraits/ld.jpeg";
 import newZealand from "../assets/portfolio/portraits/new-zealand.jpg";
+import jp from "../assets/portfolio/portraits/jp.jpeg";
 
 import joseph from "../assets/portfolio/prints/joseph.jpeg";
+import puffins from "../assets/portfolio/prints/puffins.jpeg";
 import bournville from "../assets/portfolio/prints/bournville.jpeg";
+import birds from "../assets/portfolio/prints/birds.jpeg";
+import balloons from "../assets/portfolio/prints/balloons.jpeg";
 
 import { ReactNode, useEffect, useState } from "react";
 
@@ -117,17 +124,23 @@ const PortfolioPage = () => {
             setFullscreenImageSrc={setFullscreenImageSrc}
           />
           <ImageCard
-            imgSrc={foxes}
-            setFullscreenImageSrc={setFullscreenImageSrc}
-          />
-          <ImageCard
             imgSrc={otters}
             thumbnailSrc={ottersThumb}
             setFullscreenImageSrc={setFullscreenImageSrc}
           />
           <ImageCard
+            imgSrc={fox}
+            thumbnailSrc={foxThumb}
+            setFullscreenImageSrc={setFullscreenImageSrc}
+          />
+          <ImageCard
             imgSrc={polecat}
             thumbnailSrc={polecatThumb}
+            setFullscreenImageSrc={setFullscreenImageSrc}
+          />
+          <ImageCard
+            imgSrc={lapwing}
+            thumbnailSrc={lapwingThumb}
             setFullscreenImageSrc={setFullscreenImageSrc}
           />
         </CategorySection>
@@ -158,6 +171,10 @@ const PortfolioPage = () => {
             imgSrc={newZealand}
             setFullscreenImageSrc={setFullscreenImageSrc}
           />
+          <ImageCard
+            imgSrc={jp}
+            setFullscreenImageSrc={setFullscreenImageSrc}
+          />
         </CategorySection>
         <CategorySection title="Prints">
           <ImageCard
@@ -166,6 +183,18 @@ const PortfolioPage = () => {
           />
           <ImageCard
             imgSrc={bournville}
+            setFullscreenImageSrc={setFullscreenImageSrc}
+          />
+          <ImageCard
+            imgSrc={puffins}
+            setFullscreenImageSrc={setFullscreenImageSrc}
+          />
+          <ImageCard
+            imgSrc={birds}
+            setFullscreenImageSrc={setFullscreenImageSrc}
+          />
+          <ImageCard
+            imgSrc={balloons}
             setFullscreenImageSrc={setFullscreenImageSrc}
           />
         </CategorySection>
