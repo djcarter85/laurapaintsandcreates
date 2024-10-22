@@ -15,7 +15,7 @@ import newZealand from "../assets/portfolio/portraits/new-zealand.jpg";
 import joseph from "../assets/portfolio/prints/joseph.jpeg";
 import bournville from "../assets/portfolio/prints/bournville.jpeg";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const ImageCard = ({
   imgSrc,
@@ -65,12 +65,21 @@ const FullscreenOverlay = ({
   fullscreenImageSrc,
   close,
 }: {
-  fullscreenImageSrc: string | null;
+  fullscreenImageSrc: string;
   close: () => void;
 }) => {
-  if (!fullscreenImageSrc) {
-    return null;
-  }
+  useEffect(() => {
+    const handleEsc = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        close();
+      }
+    };
+    window.addEventListener("keydown", handleEsc);
+
+    return () => {
+      window.removeEventListener("keydown", handleEsc);
+    };
+  }, []);
 
   return (
     <div
@@ -116,10 +125,12 @@ const PortfolioPage = () => {
           setFullscreenImageSrc={setFullscreenImageSrc}
         />
       </div>
-      <FullscreenOverlay
-        fullscreenImageSrc={fullscreenImageSrc}
-        close={() => setFullscreenImageSrc(null)}
-      />
+      {fullscreenImageSrc && (
+        <FullscreenOverlay
+          fullscreenImageSrc={fullscreenImageSrc}
+          close={() => setFullscreenImageSrc(null)}
+        />
+      )}
     </div>
   );
 };
