@@ -17,14 +17,19 @@ import coastPath from "../assets/portfolio/landscapes/coast-path.jpeg";
 import faroes from "../assets/portfolio/landscapes/faroes.jpeg";
 
 import ld from "../assets/portfolio/portraits/ld.jpeg";
+import ldThumb from "../assets/portfolio/portraits/ld-thumb.jpeg";
 import newZealand from "../assets/portfolio/portraits/new-zealand.jpg";
+import newZealandThumb from "../assets/portfolio/portraits/new-zealand-thumb.jpg";
 import jp from "../assets/portfolio/portraits/jp.jpeg";
+import jpThumb from "../assets/portfolio/portraits/jp-thumb.jpeg";
 
 import joseph from "../assets/portfolio/prints/joseph.jpeg";
 import puffins from "../assets/portfolio/prints/puffins.jpeg";
+import puffinsThumb from "../assets/portfolio/prints/puffins-thumb.jpeg";
 import bournville from "../assets/portfolio/prints/bournville.jpeg";
 import birds from "../assets/portfolio/prints/birds.jpeg";
 import balloons from "../assets/portfolio/prints/balloons.jpeg";
+import balloonsThumb from "../assets/portfolio/prints/balloons-thumb.jpeg";
 
 import { ReactNode, useEffect, useState } from "react";
 
@@ -165,14 +170,17 @@ const PortfolioPage = () => {
         <CategorySection title="Portraits">
           <ImageCard
             imgSrc={ld}
+            thumbnailSrc={ldThumb}
             setFullscreenImageSrc={setFullscreenImageSrc}
           />
           <ImageCard
             imgSrc={newZealand}
+            thumbnailSrc={newZealandThumb}
             setFullscreenImageSrc={setFullscreenImageSrc}
           />
           <ImageCard
             imgSrc={jp}
+            thumbnailSrc={jpThumb}
             setFullscreenImageSrc={setFullscreenImageSrc}
           />
         </CategorySection>
@@ -187,6 +195,7 @@ const PortfolioPage = () => {
           />
           <ImageCard
             imgSrc={puffins}
+            thumbnailSrc={puffinsThumb}
             setFullscreenImageSrc={setFullscreenImageSrc}
           />
           <ImageCard
@@ -195,6 +204,7 @@ const PortfolioPage = () => {
           />
           <ImageCard
             imgSrc={balloons}
+            thumbnailSrc={balloonsThumb}
             setFullscreenImageSrc={setFullscreenImageSrc}
           />
         </CategorySection>
