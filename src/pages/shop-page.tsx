@@ -1,7 +1,8 @@
 import { InternalLink } from "../components/links";
 import { Para } from "../components/para";
 import { TextBlock } from "../components/text-block";
-import oldHarry from "../assets/portfolio/landscapes/old-harry.jpeg";
+import { InlineImage } from "../components/inline-image";
+import newZealand from "../assets/portfolio/portraits/new-zealand.jpg";
 
 const ShopPage = () => {
   return (
@@ -16,7 +17,7 @@ const ShopPage = () => {
         please <InternalLink href="/contact">get in touch</InternalLink> to find
         out more!
       </Para>
-      <img src={oldHarry} className="my-8" />
+      <InlineImage src={newZealand} />
     </TextBlock>
   );
 };
