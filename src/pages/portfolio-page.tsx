@@ -13,7 +13,7 @@ import coast from "../assets/portfolio/landscapes/coast.jpg";
 import coastPath from "../assets/portfolio/landscapes/coast-path.jpeg";
 import faroes from "../assets/portfolio/landscapes/faroes.jpeg";
 
-import lauraAndDan from "../assets/portfolio/portraits/laura-and-dan.jpeg";
+import ld from "../assets/portfolio/portraits/ld.jpeg";
 import newZealand from "../assets/portfolio/portraits/new-zealand.jpg";
 
 import joseph from "../assets/portfolio/prints/joseph.jpeg";
@@ -151,7 +151,7 @@ const PortfolioPage = () => {
         </CategorySection>
         <CategorySection title="Portraits">
           <ImageCard
-            imgSrc={lauraAndDan}
+            imgSrc={ld}
             setFullscreenImageSrc={setFullscreenImageSrc}
           />
           <ImageCard
