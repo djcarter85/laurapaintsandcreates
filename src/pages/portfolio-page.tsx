@@ -16,8 +16,6 @@ import joseph from "../assets/portfolio/prints/joseph.jpeg";
 import bournville from "../assets/portfolio/prints/bournville.jpeg";
 
 import { useState } from "react";
-import { X } from "react-bootstrap-icons";
-import { Container } from "../components/container";
 
 const ImageCard = ({
   imgSrc,
@@ -75,25 +73,16 @@ const FullscreenOverlay = ({
   }
 
   return (
-    <div className="fixed inset-0 z-50 bg-primary-500/50" onClick={close}>
-      <Container>
-        <div
-          className="my-4 flex size-full flex-col gap-4 rounded-lg bg-primary-100 p-4"
-          onClick={(e) => {
-            e.stopPropagation();
-          }}
-        >
-          <div className="flex flex-row justify-end">
-            <button
-              onClick={close}
-              className="flex cursor-pointer items-center justify-center rounded-full bg-primary-600 p-1 text-2xl text-primary-50 hover:bg-primary-500"
-            >
-              <X />
-            </button>
-          </div>
-          <img src={fullscreenImageSrc} />
-        </div>
-      </Container>
+    <div
+      className="fixed left-0 top-0 z-50 h-dvh w-dvw bg-neutral-100/80"
+      onClick={close}
+    >
+      <div className="mx-auto h-full max-w-screen-lg p-4">
+        <img
+          src={fullscreenImageSrc}
+          className="h-full w-full object-contain"
+        />
+      </div>
     </div>
   );
 };
