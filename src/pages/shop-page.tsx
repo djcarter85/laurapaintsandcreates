@@ -3,13 +3,14 @@ import { Para } from "../components/para";
 import { TextBlock } from "../components/text-block";
 import { InlineImage } from "../components/inline-image";
 import newZealand from "../assets/portfolio/portraits/new-zealand.jpg";
+import { EtsyUrl } from "../constants";
 
 const ShopPage = () => {
   return (
     <TextBlock>
       <Para>
         You can visit my Etsy store at{" "}
-        <ExternalLink href="https://www.etsy.com/shop/lpaintsandcreates">
+        <ExternalLink href={EtsyUrl}>
           lpaintsandcreates
         </ExternalLink>
         , where I sell prints, cards and various other small gifts.
