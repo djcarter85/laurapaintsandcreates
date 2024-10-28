@@ -1,4 +1,4 @@
-import { InternalLink } from "../components/links";
+import { ExternalLink, InternalLink } from "../components/links";
 import { Para } from "../components/para";
 import { TextBlock } from "../components/text-block";
 import { InlineImage } from "../components/inline-image";
@@ -8,9 +8,11 @@ const ShopPage = () => {
   return (
     <TextBlock>
       <Para>
-        My Etsy store is coming soon; in the meantime, please{" "}
-        <InternalLink href="/contact">get in contact</InternalLink> if you'd
-        like to purchase any of my prints or cards!
+        You can visit my Etsy store at{" "}
+        <ExternalLink href="https://www.etsy.com/shop/lpaintsandcreates">
+          lpaintsandcreates
+        </ExternalLink>
+        , where I sell prints, cards and various other small gifts.
       </Para>
       <Para>
         I am also available for commissions. If you like the look of my work
