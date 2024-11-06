@@ -188,7 +188,8 @@ const PortfolioPage = () => {
         </CategorySection>
         <CategorySection title="Prints">
           <ImageCard
-            imgSrc={joseph}
+            imgSrc={cats}
+            thumbnailSrc={catsThumb}
             setFullscreenImageSrc={setFullscreenImageSrc}
           />
           <ImageCard
@@ -210,8 +211,7 @@ const PortfolioPage = () => {
             setFullscreenImageSrc={setFullscreenImageSrc}
           />
           <ImageCard
-            imgSrc={cats}
-            thumbnailSrc={catsThumb}
+            imgSrc={joseph}
             setFullscreenImageSrc={setFullscreenImageSrc}
           />
         </CategorySection>
