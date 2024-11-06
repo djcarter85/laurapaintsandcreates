@@ -30,6 +30,8 @@ import bournville from "../assets/portfolio/prints/bournville.jpeg";
 import birds from "../assets/portfolio/prints/birds.jpeg";
 import balloons from "../assets/portfolio/prints/balloons.jpeg";
 import balloonsThumb from "../assets/portfolio/prints/balloons-thumb.jpeg";
+import cats from "../assets/portfolio/prints/cats.png";
+import catsThumb from "../assets/portfolio/prints/cats-thumb.png";
 
 import { ReactNode, useEffect, useState } from "react";
 
@@ -205,6 +207,11 @@ const PortfolioPage = () => {
           <ImageCard
             imgSrc={balloons}
             thumbnailSrc={balloonsThumb}
+            setFullscreenImageSrc={setFullscreenImageSrc}
+          />
+          <ImageCard
+            imgSrc={cats}
+            thumbnailSrc={catsThumb}
             setFullscreenImageSrc={setFullscreenImageSrc}
           />
         </CategorySection>
