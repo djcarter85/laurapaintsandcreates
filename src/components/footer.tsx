@@ -38,7 +38,7 @@ const Footer = () => {
             <FooterIconLink href={EtsyUrl} icon={<EtsyIcon />} />
           </div>
           <div className="text-xl md:order-first">
-            Laura Paints & Creates &copy; 2024
+            Laura Paints & Creates &copy; 2025
           </div>
         </div>
       </Container>
